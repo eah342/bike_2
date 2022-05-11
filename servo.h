@@ -9,9 +9,12 @@ class Servo
 {
 private:
 	SysManager *manager;
+	INode *node;
 public:
 	Servo();
+	~Servo();
 	int init();
+	int home();
 };
 
 #endif

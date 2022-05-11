@@ -6,8 +6,8 @@
 
 using namespace sFnd;
 
-void servoTest();
-void linearActuatorTest();
+void servoTest(void);
+void linearActuatorTest(void);
 
 int main(void)
 {
@@ -22,9 +22,9 @@ int main(void)
 	return 0;
 }
 
-void servoTest()
+void servoTest(void)
 {
-	int servoInit;
+	int servoInit, servoHome;
 
 	Servo servo;
 	servoInit = servo.init();
@@ -33,9 +33,16 @@ void servoTest()
 		exit(1);
 
 	printf("Successfully initialized the servo motor.\n");
+	
+	servoHome = servo.home();
+
+	if (servoHome != 0)
+		exit(1);
+
+	printf("Successfully homed the servo motor.\n");
 }
 
-void linearActuatorTest()
+void linearActuatorTest(void)
 {
 	LinearActuator la(67, 68, 44);
 
