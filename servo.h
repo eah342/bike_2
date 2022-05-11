@@ -1,5 +1,6 @@
 #ifndef __SERVO_H_
 #define __SERVO_H_
+#include <math.h>
 #include "pubSysCls.h"
 
 using namespace sFnd;
@@ -10,11 +11,13 @@ class Servo
 private:
 	SysManager *manager;
 	INode *node;
+	int convertDegreesToCounts(float degrees);
+	float convertCountsToDegrees(int count);
 public:
 	Servo();
-	~Servo();
 	int init();
-	int home();
+	int turn(float angle);
+	float getAngle();
 };
 
 #endif

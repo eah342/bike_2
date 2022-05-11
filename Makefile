@@ -25,6 +25,10 @@ all: test
 test: $(ALL_OBJS)
 	$(CC) -L$(RPATH) -Wl,-rpath=$(RPATH) -o $(EXEC_NAME) $(ALL_OBJS) $(LIBS)
 
+interactive: $(ALL_OBJS)
+	$(CC) -L$(RPATH) -Wl,-rpath=$(RPATH) -o interactive $(ALL_OBJS) $(LIBS)
+
+
 # Remove all object files
 .PHONY: clean
 clean:
