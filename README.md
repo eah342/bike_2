@@ -19,3 +19,5 @@ Three other things to note:
 2. The code for the servo motor is based on the code in the directory ~/servoLibs/SDK_Examples. We did not change any of the comments, so if you need help understanding what is happening please refer to their documentation.
 3. The bash script "setup.sh" is for setting up various features on the beaglebone. Unlike an Arduino, a lot of features like PWM and writing analog values are not enabled by default, so you need to do special configuration to set this up. All of the necessary commands should be in the file, and we recommend running them one at a time as opposed to running the script. 
 
+Edit 12/12/2022: Repository cloned from https://github.com/pdhuddy/bike.git
+
