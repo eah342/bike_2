@@ -10,7 +10,8 @@ using namespace sFnd;
 void servoTest(void);
 void linearActuatorTest(void);
 void sensorTest(void);
-/*
+
+#if 0
 int main(void)
 {
 	printf("Running linear actuator test\n");
@@ -27,7 +28,7 @@ int main(void)
 	
 	return 0;
 }
-*/
+#endif
 
 void servoTest(void)
 {
